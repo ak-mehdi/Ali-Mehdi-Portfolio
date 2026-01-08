@@ -4,6 +4,7 @@ import './Projects.css'
 
 const Projects = () => {
   const [filter, setFilter] = useState('all')
+  const [imageErrors, setImageErrors] = useState({})
 
   const categories = [
     { id: 'all', name: 'All' },
@@ -20,6 +21,7 @@ const Projects = () => {
       type: 'WordPress Website',
       link: 'https://pisanospizza.com/',
       description: 'Professional website for a pizza restaurant with menu display and online ordering.',
+      image: 'images/pisanos-pizza.jpg.webp',
     },
     {
       id: 2,
@@ -28,22 +30,25 @@ const Projects = () => {
       type: 'Business Website',
       link: 'https://thestartupline.com',
       description: 'Modern business website designed for growth and professional presentation.',
+      image: 'images/the-startup-line.jpg.png',
     },
     {
       id: 3,
       title: 'Portfolio Website',
       category: 'frontend',
       type: 'Front-End Development',
-      link: '#',
+      link: 'https://alinazari.infinityfree.me/',
       description: 'Clean and professional portfolio websites for individuals and creatives.',
+      image: 'images/profile.jpg',
     },
     {
       id: 4,
-      title: 'E-commerce Store',
+      title: 'Onsus Store',
       category: 'ecommerce',
       type: 'WooCommerce',
-      link: '#',
+      link: 'https://alinazari.infinityfree.me/',
       description: 'Full WooCommerce store setup with product management and secure checkout.',
+      image: 'images/onsus.jpeg',
     },
   ]
 
@@ -75,14 +80,24 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id} 
-              className="project-card" 
+              className="project-card white-bg" 
               data-aos="fade-up" 
               data-aos-delay={index * 100}
             >
               <div className="project-image">
-                <div className="project-placeholder">
-                  <span>{project.title.charAt(0)}</span>
-                </div>
+                {project.image && !imageErrors[project.id] ? (
+                  <img 
+                    src={`${import.meta.env.BASE_URL}${project.image}`}
+                    alt={project.title}
+                    className="project-img"
+                    loading="lazy"
+                    onError={() => setImageErrors(prev => ({ ...prev, [project.id]: true }))}
+                  />
+                ) : (
+                  <div className="project-placeholder">
+                    <span>{project.title.charAt(0)}</span>
+                  </div>
+                )}
                 <div className="project-overlay">
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                     <FaExternalLinkAlt />
