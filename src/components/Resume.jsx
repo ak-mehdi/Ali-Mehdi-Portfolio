@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa'
 import './Resume.css'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-scroll'
 import { FaLinkedin, FaEnvelope, FaPhoneAlt, FaArrowUp, FaHeart } from 'react-icons/fa'
 import './Footer.css'

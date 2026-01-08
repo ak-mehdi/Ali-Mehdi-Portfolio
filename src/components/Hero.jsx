@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-scroll'
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import './Hero.css'
@@ -27,7 +26,7 @@ const Hero = () => {
       
       <div className="container hero-container">
         <div className="hero-content" data-aos="fade-right" data-aos-duration="1000">
-          <span className="hero-greeting">Hello, I'm</span>
+          <span className="hero-greeting">Hello, I&apos;m</span>
           <h1 className="hero-name">
             Ali <span className="highlight">Mehdi</span>
           </h1>

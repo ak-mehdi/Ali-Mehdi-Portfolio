@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaWordpress, FaCode, FaPaintBrush, FaPlug, FaRocket, FaMobileAlt } from 'react-icons/fa'
 import './Services.css'
 

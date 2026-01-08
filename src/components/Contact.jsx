@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaPaperPlane } from 'react-icons/fa'
 import './Contact.css'
 
@@ -53,10 +53,10 @@ const Contact = () => {
 
         <div className="contact-wrapper">
           <div className="contact-info-section" data-aos="fade-right">
-            <h3>Let's talk about everything!</h3>
+            <h3>Let&apos;s talk about everything!</h3>
             <p>
               Looking for a reliable WordPress or front-end developer? 
-              Let's work together to build a fast, modern, and optimized website.
+              Let&apos;s work together to build a fast, modern, and optimized website.
             </p>
 
             <div className="contact-cards">

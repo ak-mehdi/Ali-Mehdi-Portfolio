@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaFileAlt, FaBriefcase, FaEnvelope, FaLinkedin } from 'react-icons/fa'
 import './Navbar.css'

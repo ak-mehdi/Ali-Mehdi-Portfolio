@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaExternalLinkAlt, FaLink } from 'react-icons/fa'
 import './Projects.css'
 

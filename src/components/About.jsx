@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGlobe, FaCheckCircle } from 'react-icons/fa'
 import './About.css'
 
@@ -41,7 +40,7 @@ const About = () => {
 
           <div className="about-text" data-aos="fade-left">
             <h3>
-              Hi There! I'm <span>Ali Mehdi</span>
+              Hi There! I&apos;m <span>Ali Mehdi</span>
             </h3>
             <h4>WordPress Developer & Front-End Specialist</h4>
             <p>
@@ -51,7 +50,7 @@ const About = () => {
             </p>
             <p>
               I am committed to delivering high-quality work and continuously improving my skills. 
-              Whether it's a custom theme, plugin integration, or website optimization, I ensure 
+              Whether it&apos;s a custom theme, plugin integration, or website optimization, I ensure 
               the best results for my clients.
             </p>
 
