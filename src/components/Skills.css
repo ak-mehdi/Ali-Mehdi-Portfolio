@@ -1,0 +1,128 @@
+.skills {
+  background-color: var(--bg-dark-2);
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.skills-text .section-subtitle {
+  text-align: left;
+}
+
+.skills-text .section-title {
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.skills-text .section-title::after {
+  left: 0;
+  transform: none;
+}
+
+.skills-text .section-title.left-align {
+  display: block;
+}
+
+.skills-text p {
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.skill-percentage {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: skillShine 2s infinite;
+}
+
+@keyframes skillShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .skills-text {
+    text-align: center;
+  }
+
+  .skills-text .section-subtitle,
+  .skills-text .section-title {
+    text-align: center;
+  }
+
+  .skills-text .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
