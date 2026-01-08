@@ -2,7 +2,7 @@
 node_modules/
 
 # Build output (we'll use gh-pages branch for deployment)
-# dist/
+dist/
 
 # Logs
 logs
