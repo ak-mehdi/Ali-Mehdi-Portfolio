@@ -29,7 +29,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-image" data-aos="fade-right">
             <div className="about-img-wrapper">
-              <img src="/images/profile.jpg" alt="Ali Mehdi" className="about-img" />
+              <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Ali Mehdi" className="about-img" />
               <div className="experience-badge">
                 <span className="exp-number">2+</span>
                 <span className="exp-text">Years Experience</span>
@@ -75,7 +75,7 @@ const About = () => {
               ))}
             </div>
 
-            <button className="btn btn-primary">Download CV</button>
+            <a href={`${import.meta.env.BASE_URL}Ali_Mehdi_CV.pdf`} download className="btn btn-primary">Download CV</a>
           </div>
         </div>
       </div>

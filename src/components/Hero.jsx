@@ -1,17 +1,29 @@
+import { useMemo } from 'react'
 import { Link } from 'react-scroll'
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import './Hero.css'
 
 const Hero = () => {
+  // Memoize particles to prevent regeneration on re-renders
+  const particles = useMemo(() => 
+    [...Array(50)].map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${3 + Math.random() * 4}s`
+    })), []
+  )
+
   return (
     <section id="hero" className="hero">
       <div className="hero-particles">
-        {[...Array(50)].map((_, i) => (
-          <div key={i} className="particle" style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 5}s`,
-            animationDuration: `${3 + Math.random() * 4}s`
+        {particles.map((particle) => (
+          <div key={particle.id} className="particle" style={{
+            left: particle.left,
+            top: particle.top,
+            animationDelay: particle.animationDelay,
+            animationDuration: particle.animationDuration
           }}></div>
         ))}
       </div>
@@ -41,14 +53,14 @@ const Hero = () => {
             <Link to="contact" smooth={true} duration={500} offset={-20} className="btn btn-primary">
               Hire Me
             </Link>
-            <a href="#" className="btn btn-outline">Download CV</a>
+            <a href={`${import.meta.env.BASE_URL}Ali_Mehdi_CV.pdf`} download className="btn btn-outline">Download CV</a>
           </div>
         </div>
         
         <div className="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <div className="hero-image-wrapper">
             <div className="hero-img-border"></div>
-            <img src="/images/profile.jpg" alt="Ali Mehdi" className="hero-img" />
+            <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Ali Mehdi" className="hero-img" />
             <div className="hero-badge">
               <span className="badge-icon">💼</span>
               <div className="badge-text">

@@ -16,9 +16,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I will get back to you soon.')
+    
+    // Construct mailto link with form data
+    const mailtoLink = `mailto:soldierali313313@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
+    
+    // Open email client
+    window.location.href = mailtoLink
+    
+    // Reset form after submission
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
 

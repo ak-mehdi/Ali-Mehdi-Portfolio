@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
-import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaFileAlt, FaBriefcase, FaEnvelope, FaLinkedin } from 'react-icons/fa'
+import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaBriefcase, FaEnvelope, FaLinkedin, FaCode, FaGraduationCap } from 'react-icons/fa'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -14,8 +14,8 @@ const Navbar = () => {
     { id: 'hero', icon: <FaHome />, label: 'Home' },
     { id: 'about', icon: <FaUser />, label: 'About' },
     { id: 'services', icon: <FaCog />, label: 'Services' },
-    { id: 'skills', icon: <FaFileAlt />, label: 'Skills' },
-    { id: 'resume', icon: <FaFileAlt />, label: 'Resume' },
+    { id: 'skills', icon: <FaCode />, label: 'Skills' },
+    { id: 'resume', icon: <FaGraduationCap />, label: 'Resume' },
     { id: 'projects', icon: <FaBriefcase />, label: 'Portfolio' },
     { id: 'contact', icon: <FaEnvelope />, label: 'Contact' },
   ]

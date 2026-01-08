@@ -1,7 +1,14 @@
 .footer {
   padding: 60px 0 30px;
   background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
-  color: var(--white);
+  color: var(--text-white);
+  margin-left: var(--sidebar-width);
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    margin-left: 0;
+  }
 }
 
 .footer-content {
@@ -15,7 +22,7 @@
 .footer-logo {
   font-size: 28px;
   font-weight: 800;
-  color: var(--white);
+  color: var(--text-white);
   cursor: pointer;
   display: block;
   margin-bottom: 15px;
@@ -44,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--text-white);
   font-size: 18px;
   transition: var(--transition);
 }
@@ -88,7 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--text-white);
   font-size: 18px;
   cursor: pointer;
   transition: var(--transition);

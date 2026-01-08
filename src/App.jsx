@@ -20,8 +20,8 @@ function App() {
         <Resume />
         <Projects />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
     </div>
   )
 }
