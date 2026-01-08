@@ -1,3 +1,4 @@
+import { FaWhatsapp } from 'react-icons/fa'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -22,6 +23,17 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      
+      {/* Floating WhatsApp Button */}
+      <a 
+        href="https://wa.me/923171136824" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="whatsapp-float"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
     </div>
   )
 }
